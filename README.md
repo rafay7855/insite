@@ -1,7 +1,7 @@
 # README
 ## Insite Personal Data Tracking Tool
 
-### "I want to track and visualize sensitive information about my life without a corporation looking at it, selling it, or leaking it."
+#### "I want to track and visualize sensitive information about my life without a corporation looking at it, selling it, or leaking it."
 
 
 
