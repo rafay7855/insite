@@ -11,7 +11,8 @@ COPY requirements.txt .
 RUN pip install -r requirements.txt
 
 # copy the content of the local src directory to the working directory
-COPY src/ .
+COPY app.py .
+COPY flaskapp/ .
 
-# command to run on container start
+# command to run on container start - AMMEND
 CMD [ "python", "./server.py" ] 
