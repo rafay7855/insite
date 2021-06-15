@@ -1,5 +1,7 @@
 from flask import request, render_template
-from flaskapp import app
+from flaskapp import app, db
+from tindydb import Query
+
 
 @app.route('/')
 def index():

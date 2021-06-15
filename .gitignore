@@ -1,3 +1,5 @@
+db.json
+
 node_modules
 
 # Byte-compiled / optimized / DLL files
@@ -164,6 +166,7 @@ sketch
 
 # production
 /build
+
 
 # misc
 .DS_Store

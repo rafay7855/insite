@@ -15,8 +15,8 @@ Insite is currently being developed for personal use. I may polish and release t
     - Spending
     - Mood & Mental Health
     - Others
-- csv, excel extput
-- data encryption
+- Survey builder
+- csv, excel output
 - Ingestion of other data sources
 
 
