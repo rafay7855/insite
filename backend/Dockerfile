@@ -15,4 +15,4 @@ COPY tests tests
 ENV FLASK_APP insite.py
 ENV FLASK_CONFIG dev
 
-CMD [ "flask", "run" ] 
+CMD [ "python3", "-m", "flask", "test" ] 
