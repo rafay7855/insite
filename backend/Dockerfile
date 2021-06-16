@@ -1,18 +1,18 @@
-# set base image (host OS)
-FROM python:3.8
+FROM python:3.9
 
-# set the working directory in the container
-WORKDIR /code
+WORKDIR /usr/src/insite
 
-# copy the dependencies file to the working directory
+# Install Dependencies
 COPY requirements.txt .
-
-# install dependencies
-RUN pip install -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
 # copy the content of the local src directory to the working directory
-COPY app.py .
-COPY flaskapp/ .
+COPY insite.py .
+COPY app app
+COPY tests tests 
 
-# command to run on container start - AMMEND
-CMD [ "python", "./server.py" ] 
+# Environment Variables
+ENV FLASK_APP insite.py
+ENV FLASK_CONFIG dev
+
+CMD [ "flask", "run" ] 
