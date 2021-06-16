@@ -4,6 +4,8 @@ class SurveyResponse:
     def __init__(self, survey_id: int, q_responses: List, datetime):
         self.survey_id = survey_id
         self.q_responses = q_responses
+        self.timestamp = 0
+        ## TODO implement timestamp - ISO 8601?
     
     def to_json(self):
         question_responses = [r.to_json() for r in self.q_responses]
@@ -13,6 +15,7 @@ class SurveyResponse:
         }
         return json_survey_response
     
+
 class QuestionResponse:
     def __init__(self, number: int, response):
         self.number = number
@@ -24,6 +27,7 @@ class QuestionResponse:
             'response': self.response
         }
         return json_question_response
+
 
 class Survey:
     def __init__(self, surveyid: int, category: str, questions: List):
