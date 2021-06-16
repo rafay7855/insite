@@ -1,6 +1,6 @@
 from flask import Flask
 from flask_bootstrap import Bootstrap
-from tinydb import TinyDB
+from tinydb import TinyDB, database
 import os
 from config import configs
 
@@ -12,7 +12,11 @@ def create_app(configname):
     configs[configname].init_app(app)
 
     bootstrap.init_app(app)
-    db = TinyDB('db.json')
+    db_file = TinyDB('db.json')
+    db = {
+        'surveys': db_file.table['surveys'],
+        'responses': db_file.table['responses']
+    }
     
     @app.route('/')
     def hello():
