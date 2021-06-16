@@ -7,7 +7,7 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r  requirements.txt
 
 # copy the content of the local src directory to the working directory
-COPY insite.py config.py .
+COPY insite.py config.py ./
 COPY app app
 COPY tests tests 
 
