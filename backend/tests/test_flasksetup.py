@@ -1,11 +1,11 @@
 import unittest
 from flask import current_app
 from app import create_app
-from insite import configs
+from config import configs
 
 class FlaskSetupTestCase(unittest.TestCase):
     def setUp(self):
-        self.app = create_app(configs['test'])
+        self.app = create_app('test')
         self.app_context = self.app.app_context()
         self.app_context.push()
 
