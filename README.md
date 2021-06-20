@@ -1,7 +1,7 @@
 # README
 ## Insite Personal Data Tracking Tool
 
-#### "I want to track and visualize sensitive information about my life with as little threat surface as possible
+#### "I want to track and visualize sensitive information about my life with as little threat surface as possible"
 This means
 - Private first
 - Private network to reduce threat of data breaches or attacks
