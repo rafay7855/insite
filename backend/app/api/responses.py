@@ -9,12 +9,12 @@ def get_response(id):
     ##TODO
     pass
 
-@api.route('/surveys/<int:id>/responses/')
+@api.route('/surveys/<str:id>/responses/')
 def get_survey_responses(id):
     ##TODO
     pass
 
-@api.route('/surveys/<int:id>/responses', methods=['POST'])
+@api.route('/surveys/<str:id>/responses', methods=['POST'])
 def new_survey_response(id):
     ##TODO
     pass
