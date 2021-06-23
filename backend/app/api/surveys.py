@@ -1,14 +1,14 @@
 from flask import jsonify, request, url_for, current_app
-from .. import db
 from tinydb import Query
+from .. import db
 from ..models import Survey, Question
 from . import api
 
 
 @api.route('/surveys/')
 def get_surveys():
-    req_json = request.get_json()
-    surveys_query = Query()
+    # req_json = request.get_json()
+    # surveys_query = Query()
     surveys = db['surveys'].all()
     return jsonify({
         'surveys': [Survey(x).to_json() for x in surveys]
@@ -25,7 +25,7 @@ def get_survey(identifier: str):
 @api.route('/surveys/', methods=['POST'])
 def new_survey():
     try:
-        survey = Survey(request.get_json())
+        survey = Survey(**request.get_json())
         identifier = survey.identifier
     except:
         # TODO:  handle invalid request
