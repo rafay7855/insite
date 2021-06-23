@@ -1,0 +1,35 @@
+[
+    {
+        "identifier": "mood-survey-sample",
+        "name": "Daily Mood Survey",
+        "tags": ["front-end", "test", "sample"],
+        "questions": [
+            {
+                "survey_id": "mood-survey-sample",
+                "number": 1,
+                "response_type": "List[str]",
+                "text": "List some feelings you have.",
+                "alt_text": "As many as you want"
+            },
+            {
+                "survey_id": "mood-survey-sample",
+                "number": 2,
+                "response_type": "int",
+                "text": "Rate your mood on a scale of 1-10"
+            }
+        ]
+    },
+    {
+        "identifier": "food-drink-survey-sample",
+        "name": "Post-Dinner Survey",
+        "tags": ["front-end", "test", "sample"],
+        "questions": [
+            {
+                "survey_id": "food-drink-sample",
+                "number": 1,
+                "response_type": "int",
+                "text": "How many cups of coffee did you have today?"
+            }
+        ]
+    }
+]
