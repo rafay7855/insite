@@ -14,8 +14,8 @@ def create_app(configname):
     bootstrap.init_app(app)
     db_file = TinyDB('db.json')
     db = {
-        'surveys': db_file.table['surveys'],
-        'responses': db_file.table['responses']
+        'surveys': db_file.table('surveys'),
+        'responses': db_file.table('responses')
     }
     
     @app.route('/')
