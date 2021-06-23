@@ -90,7 +90,7 @@ class Survey:
     Attributes:
         identifier: a string identifying this survey. Used in other models as "survey_id"
         name: Human-readable name of the survey.
-        category: a category
+        tags: list of string tags for this survey
         response_type: a string denoting the type of response expected for this question
         text: the question itself.
         alt_text: optional alternative text
@@ -98,16 +98,17 @@ class Survey:
     def __init__(self, **kwargs):
         self.identifier: str = kwargs['identifier']
         self.name: str = kwargs['name']
-        self.category: str = kwargs['category']
-        self.questions: List = [Question(**q) for q in kwargs['questions']]
         self.created_at = dt.datetime.isoformat()
+        self.tags: List[str] = kwargs['tags']
+        self.questions: List = [Question(**q) for q in kwargs['questions']]
+       
 
     def to_json(self):
         questions = [q.to_json() for q in self.questions]
         json_survey = {
             'identifier': self.identifier,
             'name': self.name,
-            'category': self.category,
+            'tags': self.tags,
             'questions': questions
         }
         return json_survey
