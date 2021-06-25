@@ -1,4 +1,4 @@
-from typing import List
+from typing import List, Dict
 import datetime as dt
 
 # Defining the Data model
@@ -52,26 +52,29 @@ class Question:
 
     Attributes:
         survey_id: a string identifying the survey this question belongs to
-        number: an integer denoting the number of this question.
+        number: and integer that denotes the number of this question.
         question_id: a unique identifier for this question based on number and survey_id
         response_type: a string denoting the type of response expected for this question
         text: the question itself.
         alt_text: optional alternative text
-    """
+    """ 
+    
     def __init__(self, **kwargs):
-        self.survey_id = kwargs['survey_id']
+        self.survey_id: str = kwargs['survey_id']
         self.number: int = kwargs['number']
         # Generate question identifier
-        self.question_id = f"{self.survey_id}-{self.number}"
+        self.question_id: str = f"{self.survey_id}-{self.number}"
         self.response_type: str = kwargs['response_type']
-        # Questions may have alt text
         self.text: str = kwargs['text']
+        # Questions may have alt_text parameter
         if 'alt_text' in kwargs.keys():
             self.alt_text: str = kwargs['alt_text']
         else:
             self.alt_text: str = ''
     
+    
     def to_json(self):
+        # Return this object as a Json Dict
         json_question = {
             'survey_id': self.survey_id,
             'question_id': self.question_id,
@@ -103,13 +106,13 @@ class Survey:
         self.questions: List = [Question(**q) for q in kwargs['questions']]
        
 
+    # Return this object as a Json Dict
     def to_json(self):
-        questions = [q.to_json() for q in self.questions]
         json_survey = {
             'identifier': self.identifier,
             'name': self.name,
             'tags': self.tags,
-            'questions': questions
+            'questions': [q.to_json() for q in self.questions]
         }
         return json_survey
 
