@@ -11,9 +11,9 @@ Insite is a tool being *developed for personal use* and learning. May be polishe
 - API for surveys, questions, and responses 
 
 ### In Progress
-- API specification
 - Server rendered frontend
 - API testing
+- API specification
 
 ### Future
 - Data visualization
@@ -29,7 +29,7 @@ Insite is a tool being *developed for personal use* and learning. May be polishe
 - microservice architecture from scratch
 
 ### Practicing
-- Better usage of git, cleaner commits
+- Better git commits
 - API design
 - Flask
 - cloud deployment
