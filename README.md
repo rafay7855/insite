@@ -28,7 +28,7 @@ Insite is a tool being *developed for personal use* and learning. May be polishe
 - Docker Compose from scratch
 - microservice architecture from scratch
 
-### # Practicing
+### Practicing
 - Better usage of git, cleaner commits
 - API design
 - Flask
