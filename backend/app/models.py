@@ -16,7 +16,7 @@ class SurveyResponse:
 
     def __init__(self, **kwargs):
         self.survey_id = kwargs['survey_id']
-        self.timestamp = dt.datetime.isoformat()
+        self.timestamp = dt.datetime.now().isoformat()
         self.q_responses = [QuestionResponse(**r) for r in kwargs['q_responses']]
     
     def to_json(self):
@@ -98,7 +98,7 @@ class Survey:
     def __init__(self, **kwargs):
         self.identifier: str = kwargs['identifier']
         self.name: str = kwargs['name']
-        self.created_at = dt.datetime.isoformat()
+        self.created_at = dt.datetime.now().isoformat()
         self.tags: List[str] = kwargs['tags']
         self.questions: List = [Question(**q) for q in kwargs['questions']]
        

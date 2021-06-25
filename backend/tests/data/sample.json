@@ -28,7 +28,14 @@
                 "survey_id": "food-drink-sample",
                 "number": 1,
                 "response_type": "int",
-                "text": "How many cups of coffee did you have today?"
+                "text": "How many cups of coffee did you have today?",
+                "alt_text": "1 cup = 8 ounces"
+            },
+            {
+                "survey_id": "food-drink-sample",
+                "number": 2,
+                "response_type": "str",
+                "text": "What did you have for breakfast?"
             }
         ]
     }
