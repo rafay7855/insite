@@ -31,6 +31,7 @@ class Survey:
         json_survey = {
             'identifier': self.identifier,
             'name': self.name,
+            'created_at': self.created_at,
             'tags': self.tags,
             'questions': [q.to_json() for q in self.questions]
         }

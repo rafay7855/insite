@@ -27,7 +27,7 @@ Insite is being *developed for personal use* and learning. May be polished for r
 - using Docker as core part of the developer toolchain, for testing and buillding
 - more advanced Docker usage for hosting
 - Docker Compose from scratch
-- microservice architecture from scratch
+- distributed architecture from scratch
 
 #### Practicing
 - Frontend skills
