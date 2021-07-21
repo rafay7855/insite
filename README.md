@@ -1,35 +1,38 @@
 # README
 ## Insite Personal Data Tracking Tool
 
-Insite is a tool being *developed for personal use* and learning. May be polished for release eventually
 
-## Overview
- 
+### Overview
+Insite is a tool for private, personal analytics. It is designed to run locally 
 
-## Development
-### Current Features
+[An unnamed spinoff](https://github.com/rafay7855/codename-squids) of this project is being developed as a survey service for release. Much of that work will be incorporated here, especially frontend code.
+
+    
+### Development
+#### Current Features
 - API for surveys, questions, and responses 
 
-### In Progress
-- Server rendered frontend
-- API testing
+#### In Progress
+- React Frontend for viewing and answering surveys
 - API specification
+- API Testing
 
-### Future
+#### Future
 - Data visualization
-- React frontend
+- Expanded support for personal analytics with better abstractions.
 - Other services to scrape/ingest data and send to insite's database
+- HTTP Authentication
 
-
-## Learning Objectives
-### Experimenting with 
+### Learning Objectives
+#### Experimenting with 
 - using Docker as core part of the developer toolchain, for testing and buillding
 - more advanced Docker usage for hosting
 - Docker Compose from scratch
-- microservice architecture from scratch
+- distributed architecture from scratch
 
-### Practicing
+#### Practicing
+- Frontend skills
 - Better git commits
 - API design
 - Flask
-- cloud deployment
+
